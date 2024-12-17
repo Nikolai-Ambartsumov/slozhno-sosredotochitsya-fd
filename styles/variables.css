@@ -1,4 +1,10 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --highlighted-text-color: 0, 0, 40;
+  --text-color: 241, 178, 206;
+  --decorated-zone-color: 255, 0, 112;
+  --highlight-color: 255, 0, 112;
+  --page-title-text-color: 219, 0, 255;
+
+  --margin-header-and-footer: 40px;
+  --page-padding: 10px;
+}

@@ -1,5 +1,169 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: rgb(var(--text-color));
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: var(--page-padding);
+}
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  margin-block-end: var(--margin-header-and-footer);
+}
+
+.decorated-zone::before, 
+.decorated-zone::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border: none;
+}
+
+.decorated-zone::before {
+  border-top: 1px solid rgb(var(--decorated-zone-color));
+  border-right: 1px solid rgb(var(--decorated-zone-color));
+  top: 0;
+  right: 0;
+}
+
+.decorated-zone::after {
+  border-bottom: 1px solid rgb(var(--decorated-zone-color));
+  border-left: 1px solid rgb(var(--decorated-zone-color));
+  bottom: 0;
+  left: 0;
+}
+
+.rec {
+  position: absolute;
+  top: 0px;
+  right: 9px;
+  color: rgb(var(--highlight-color));
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.rec::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgb(var(--highlight-color));
+  box-shadow: 0px 0px 4px 2px currentColor;
+  display: block;
+  margin-left: 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  background-color: transparent;
+  color: rgb(var(--highlight-color));
+  line-height: 18px;
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  color: rgb(var(--page-title-text-color));
+  text-shadow: 4px 4px 0 rgb(var(--highlight-color));
+}
+
+.page-paragraph {
+  font-weight: bold;
+  color: rgb(var(--highlighted-text-color));
+  background-color: rgb(var(--highlight-color));
+}
+
+.section__content {
+  display: grid;
+  gap: 20px;
+  margin-block-end: 50px;
+}
+
+.section__album {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.section__content-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(var(--highlight-color));
+}
+
+.section__content-text {
+  display: grid;
+  gap: 10px;
+}
+
+.text-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(var(--highlighted-text-color));
+  background-color: rgb(var(--highlight-color));
+}
+
+.exception-normal {
+  font-weight: normal;
+}
+
+.album {
+  max-inline-size: calc(100vw - 2 * var(--page-padding));
+}
+
+.footer {
+  text-shadow: 2px 2px 0 rgb(var(--highlight-color));
+  block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-block-start: var(--margin-header-and-footer);
+}
+
+.footer::before, 
+.footer::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border: none;
+}
+
+.footer::before {
+  border-top: 1px solid rgb(var(--decorated-zone-color));
+  border-right: 1px solid rgb(var(--decorated-zone-color));
+  top: 0;
+  right: 0;
+}
+
+.footer::after {
+  border-bottom: 1px solid rgb(var(--decorated-zone-color));
+  border-left: 1px solid rgb(var(--decorated-zone-color));
+  bottom: 0;
+  left: 0;
 }
