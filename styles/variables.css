@@ -1,10 +1,25 @@
 :root {
   --highlighted-text-color: 0, 0, 40;
+  --bg-color: 0, 0, 40;
   --text-color: 241, 178, 206;
   --decorated-zone-color: 255, 0, 112;
   --highlight-color: 255, 0, 112;
   --page-title-text-color: 219, 0, 255;
 
-  --margin-header-and-footer: 40px;
+  --bg-image: url(../images/cover-image-dark.png);
+
+  --margin-header-and-footer: 52px;
   --page-padding: 10px;
+  --gap-album: 10px;
+  --margin-bottom-section: 50px;
+  --font-size-page-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}
+
+@media (min-width: 780px) {
+  :root {
+    --margin-header-and-footer: 60px;
+    --gap-album: 20px;
+    --margin-bottom-section: 80px;
+    --font-size-page-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
