@@ -8,18 +8,35 @@
 
   --bg-image: url(../images/cover-image-dark.png);
 
-  --margin-header-and-footer: 52px;
+  --margin-header: 49px;
+  --margin-footer: 50px;
+
   --page-padding: 10px;
   --gap-album: 10px;
   --margin-bottom-section: 50px;
   --font-size-page-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --display-vh: 97vh;
+  --margin-bs-theme-menu: 10px;
+  --margin-bs-paragraph: 11px;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   :root {
-    --margin-header-and-footer: 60px;
+    --margin-header: 80px;
     --gap-album: 20px;
     --margin-bottom-section: 80px;
     --font-size-page-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --page-padding: 20px;
+    --display-vh: 96vh;
+    --margin-bs-theme-menu: 109px;
+    --margin-bs-paragraph: 113px;
+    --margin-footer: 82px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --display-vh: 95vh;
+    --margin-bs-paragraph: 60px;
   }
 }

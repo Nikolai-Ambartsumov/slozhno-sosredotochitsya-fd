@@ -14,13 +14,12 @@
 }
 
 .header {
-  block-size: 100vh;
-  max-block-size: 644px;
+  block-size: var(--display-vh);
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   align-items: center;
-  margin-block-end: var(--margin-header-and-footer);
+  margin-block-end: var(--margin-header);
 }
 
 .decorated-zone::before, 
@@ -69,6 +68,7 @@
 
 .header__theme-menu {
   justify-self: end;
+  margin-block-start: var(--margin-bs-theme-menu);
 }
 
 .header__theme-menu-list {
@@ -116,6 +116,7 @@
   font-weight: bold;
   color: rgb(var(--highlighted-text-color));
   background-color: rgb(var(--highlight-color));
+  margin-block-end: var(--margin-bs-paragraph);
 }
 
 .section__content {
@@ -182,13 +183,12 @@
 
 .footer {
   text-shadow: 2px 2px 0 rgb(var(--highlight-color));
-  block-size: 100vh;
-  max-block-size: 644px;
+  block-size: var(--display-vh);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-block-start: var(--margin-header-and-footer);
+  margin-block-start: var(--margin-footer);
 }
 
 .footer::before, 
@@ -214,9 +214,13 @@
   left: 0;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 768px) {
+  .header .page-title {
+    margin-inline-start: calc(-1 * var(--page-padding));
+  }
+
   .page-paragraph {
-    max-inline-size: 50vw;
+    max-inline-size: 47.5vw;
     justify-self: end;
   }
 
@@ -235,7 +239,7 @@
 
   .album-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 194px 228px 316px;
   }
 
   .album:nth-child(1) {
@@ -262,17 +266,6 @@
     grid-column: 2 / 4;
     grid-row: 3;
   }
-}
-
-@media (min-width: 1024px) {
-  .header__theme-menu {
-    justify-self: center;
-    align-self: self-start;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: row;
-  }
 
   .section__content-modified-m {
     grid-template-columns: 1fr 1fr 1fr;
@@ -284,7 +277,32 @@
   }
 
   .section__content-text-modified-m {
-    grid-row: 2;
+    grid-column: 1 / 4;
     align-self: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: self-start;
+    margin-block-start: 0;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .page-paragraph {
+    max-inline-size: 48vw;
+  }
+
+  .section__content-text-modified-m {
+    grid-column: auto;
+    grid-row: 2;
+  }
+
+  .album-grid {
+    grid-template-rows: 258px 314px 431px;
   }
 }
