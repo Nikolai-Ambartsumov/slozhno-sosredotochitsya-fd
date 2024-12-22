@@ -4,6 +4,8 @@
   --accent-color: #FF0070;
   --text-color: #000028;
 
+  --decoration-color: #FF0070;
+
   --padding-of-blocks: 10px;
   --right-for-rec-sign: 19px;
   --margin-end-header: 30px;
@@ -11,4 +13,5 @@
   --margin-end-paragraph: 13px;
   --section-gap: 20px;
   --menu-gap: 11px;
+  --margin-start-footer: 24px;
 }
