@@ -196,6 +196,18 @@
   text-shadow: 1.5px 1.5px 0 var(--accent-color);
 }
 
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .footer {
   block-size: 100vh;
   min-block-size: 668px;
