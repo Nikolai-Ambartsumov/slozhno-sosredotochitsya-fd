@@ -1,12 +1,33 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
+  --bg-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --text-color: #000028;
+
+  --decoration-color: #ff0070;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .header__rec-sign {
+  display: flex;
+}
+
+.theme-dark .header__theme-menu-button {
+  color: #ff0070;
+}
+
+.theme-dark
+  .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  border: 1px solid rgb(255 0 112 / 0.5);
+}
+
+.theme-dark .title {
+  color: #db00ff;
+}
+
+.theme-dark .section__title {
+  color: #ff0070;
+}
+
+.theme-dark .main {
+  color: #f1b2ce;
 }
