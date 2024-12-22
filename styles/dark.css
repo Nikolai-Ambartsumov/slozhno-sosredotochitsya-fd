@@ -5,29 +5,10 @@
 */
 
 :root.theme-dark {
-  --highlighted-text-color: 0, 0, 40;
-  --bg-color: 0, 0, 40;
-  --text-color: 241, 178, 206;
-  --decorated-zone-color: 255, 0, 112;
-  --highlight-color: 255, 0, 112;
-  --page-title-text-color: 219, 0, 255;
 
-  --bg-image: url(../images/cover-image-dark.png);
 }
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-.theme-dark .section__content-title {
-  color: rgb(var(--highlight-color));
-}
-
-.theme-dark .header__theme-menu-button {
-  color: rgb(var(--highlight-color));
-}
-
-.theme-dark .rec {
-  display: flex;
 }
 

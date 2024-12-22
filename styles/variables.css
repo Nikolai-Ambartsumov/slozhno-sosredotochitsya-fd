@@ -1,42 +1,14 @@
 :root {
-  --highlighted-text-color: 0, 0, 40;
-  --bg-color: 0, 0, 40;
-  --text-color: 241, 178, 206;
-  --decorated-zone-color: 255, 0, 112;
-  --highlight-color: 255, 0, 112;
-  --page-title-text-color: 219, 0, 255;
-
+  --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
+  --accent-color: #FF0070;
+  --text-color: #000028;
 
-  --margin-header: 49px;
-  --margin-footer: 50px;
-
-  --page-padding: 10px;
-  --gap-album: 10px;
-  --margin-bottom-section: 50px;
-  --font-size-page-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --display-vh: 100vh;
-  --margin-bs-theme-menu: 10px;
-  --margin-bs-paragraph: 11px;
-}
-
-@media (min-width: 768px) {
-  :root {
-    --margin-header: 80px;
-    --gap-album: 20px;
-    --margin-bottom-section: 80px;
-    --font-size-page-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --page-padding: 20px;
-    /*--display-vh: 96vh;*/
-    --margin-bs-theme-menu: 109px;
-    --margin-bs-paragraph: 113px;
-    --margin-footer: 82px;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    /*--display-vh: 95vh;*/
-    --margin-bs-paragraph: 60px;
-  }
+  --padding-of-blocks: 10px;
+  --right-for-rec-sign: 19px;
+  --margin-end-header: 30px;
+  --margin-start-menu: 10px;
+  --margin-end-paragraph: 13px;
+  --section-gap: 20px;
+  --menu-gap: 11px;
 }
