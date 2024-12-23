@@ -1,5 +1,6 @@
 .page {
-  background: var(--bg-color) var(--bg-image) center / cover no-repeat fixed;
+  background: var(--bg-image) center / cover no-repeat fixed;
+  background-color: var(--bg-color);
 }
 
 .header {
@@ -70,7 +71,7 @@
 }
 
 .header__theme-menu-button {
-  color: #ff0070;
+  color: var(--button-color);
   background-color: transparent;
   border: 1px solid transparent;
   padding: 3px 13px;
@@ -92,14 +93,14 @@
 
 .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
   cursor: pointer;
-  border: 1px solid rgb(255 0 112 / 0.5);
+  border: 1px solid rgb(var(--button-color-hover) / 0.5);
 }
 
 .title {
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
-  color: #db00ff;
+  color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -121,7 +122,7 @@
 
 .main {
   padding: var(--padding-of-blocks);
-  color: #f1b2ce;
+  color: var(--main-color);
 }
 
 .section {
@@ -129,27 +130,18 @@
   gap: var(--section-gap);
 }
 
-.section-what {
-  display: grid;
-  gap: 20px;
-}
-
 .section-album {
-  display: grid;
   gap: 10px;
 }
 
-.section,
-.section-what,
-.section-how,
-.section-album:not(:last-child) {
+.section:not(:last-child) {
   margin-block-end: 50px;
 }
 
 .section__title {
   font-weight: bold;
   font-size: 18px;
-  color: #ff0070;
+  color: var(--section-title-color);
 }
 
 .section-how-additional-group {
@@ -168,7 +160,8 @@
 
 .section-album-list {
   display: grid;
-  gap: 5px;
+  gap: 10px;
+  line-height: 0;
 }
 
 .section__item {
@@ -231,7 +224,7 @@
     --margin-end-header: 40px;
     --margin-start-menu: 111px;
     --margin-end-paragraph: 115px;
-    --inline-size-paragraph: 47.5vw;
+    --inline-size-paragraph: 50%;
     --title-what-inline-size: 236px;
   }
 
@@ -248,6 +241,11 @@
     grid-template-columns: 1fr 2fr;
   }
 
+  .section-what,
+  .section-album {
+    grid-template-columns: 1fr;
+  }
+
   .section__title-what {
     max-inline-size: var(--title-what-inline-size);
   }
@@ -256,10 +254,7 @@
     gap: 20px;
   }
 
-  .section,
-  .section-what,
-  .section-how,
-  .section-album:not(:last-child) {
+  .section:not(:last-child) {
     margin-block-end: 80px;
   }
 
@@ -268,9 +263,9 @@
   }
 
   .section-album-list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 192px 230px 318px;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 18px;
   }
 
   .section-album-item:nth-child(1) {
@@ -311,11 +306,14 @@
 
   :root {
     --margin-end-paragraph: 58px;
-    --inline-size-paragraph: 48vw;
     --section-gap: 10px;
     --menu-gap: 9px;
     --margin-start-menu: 0;
     --title-what-inline-size: 315px;
+  }
+
+  .section-what {
+    --section-gap: 20px;
   }
 
   .header__theme-menu {
@@ -329,9 +327,5 @@
 
   .section__list-what {
     grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
-  }
-
-  .section-album-list {
-    grid-template-rows: 260px 315px 433px;
   }
 }

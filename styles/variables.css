@@ -3,8 +3,12 @@
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --text-color: #000028;
-
+  --button-color: #ff0070;
   --decoration-color: #ff0070;
+  --button-color-hover: 255 0 112;
+  --title-color: #db00ff;
+  --section-title-color: #ff0070;
+  --main-color: #f1b2ce;
 
   --padding-of-blocks: 10px;
   --right-for-rec-sign: 19px;
@@ -13,5 +17,5 @@
   --margin-end-paragraph: 13px;
   --section-gap: 20px;
   --menu-gap: 11px;
-  --margin-start-footer: 24px;
+  --margin-start-footer: 29px;
 }

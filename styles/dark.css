@@ -3,31 +3,14 @@
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --text-color: #000028;
-
+  --button-color: #ff0070;
   --decoration-color: #ff0070;
+  --button-color-hover: 255 0 112;
+  --title-color: #db00ff;
+  --section-title-color: #ff0070;
+  --main-color: #f1b2ce;
 }
 
 .theme-dark .header__rec-sign {
   display: flex;
-}
-
-.theme-dark .header__theme-menu-button {
-  color: #ff0070;
-}
-
-.theme-dark
-  .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
-  border: 1px solid rgb(255 0 112 / 0.5);
-}
-
-.theme-dark .title {
-  color: #db00ff;
-}
-
-.theme-dark .section__title {
-  color: #ff0070;
-}
-
-.theme-dark .main {
-  color: #f1b2ce;
 }
